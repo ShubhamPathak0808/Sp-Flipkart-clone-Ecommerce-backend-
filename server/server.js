@@ -5,7 +5,7 @@ import homeProductData_In_productSchema from "./database/modols-schema/homeProdu
 import bodyParser from "body-parser";
 import router from "./routes/route.js"
 import cors from "cors";
-import { Path } from "mongoose";
+// import { Path } from "mongoose";
 import {v4 as uuid} from "uuid"
 
 dotenv.config();
@@ -25,10 +25,10 @@ const URL = process.env.MONGODB_URL || `mongodb+srv://${USERNAME}:${PASSWORD}@fl
 Connection(URL);
 
 //static file
-app.use(express.static(path.join(__dirname, './client/build')));
-app.get('*',function(req,res){
-    res.sendFile(path.join(__dirname,"./client/build/index.html"));
-})
+// app.use(express.static(path.join(__dirname, './client/build')));
+// app.get('*',function(req,res){
+//     res.sendFile(path.join(__dirname,"./client/build/index.html"));
+// })
 
 // //production level code for deployment
 // if(process.env.NODE_ENV === 'production'){
